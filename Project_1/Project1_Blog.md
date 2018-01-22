@@ -4,7 +4,7 @@
 ### Overview
 
 ### Problem Summary
-#### Objective
+#### Objective:
 Optimize Placement of WTWY street teams to:
 1. Increase attendance at their annual summer gala.
 2. Increase attract potential donors to the organization.
@@ -17,3 +17,8 @@ Optimize Placement of WTWY street teams to:
     * Techology Workers (engineers, scientists, researchers, etc.)
     * Working Population
     * Wealthy Donors
+
+#### Data Sources:
+* NYC MTA Turnsile Data
+    * Entry and exit counts for every turnstile in the MTA system recorded approximately every four hours starting at 12AM.
+ 
