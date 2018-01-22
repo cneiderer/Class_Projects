@@ -11,12 +11,12 @@ After reviewing the proposal, my partner and I broke the project down into 3 par
 3. Data exploration and recommendations.
 
 ### Part 1:
-#### Objectives:
+#### Objectives
 Optimize Placement of WTWY street teams to:
 * Increase attendance at their annual summer gala.
 * Attract potential donors to the organization.
 
-#### Assumptions:
+#### Assumptions
 * WYWT annual gala will be held mid-June 2018.
 * Street team canvassing will target March through June 2018 timeframe.
 * Target demographic:
@@ -25,10 +25,14 @@ Optimize Placement of WTWY street teams to:
     * Wealthy Donors (yearly income greater than $200K)
 
 ### Part 2:
+The WTWY client identified NYC MTA turnsile data as their primary data source of interest.  Because the insights available within the MTA turnsile data are limited mainly to foot traffic counts, we spent some time searching the web for data sources that would assist tying MTA stations to the target demographic.  We ended finding American Community Survey data which is tied to census tracts for income, age, and degree information.  We  NYC startup maps to assist with identifying the stations located in the city's technology hubs. 
+
+#### Data Description
 * NYC MTA Turnsile Data:
     * Entry and exit counts for every turnstile in the NYC MTA system.
     * Recorded approximately every four hours starting at 12AM (i.e., 12AM, 4AM, 8AM, 12PM, 4PM, 8PM)
-* 
+* NYC ACS Census Data:
+    * 
     
 ### Approach
 
