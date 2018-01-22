@@ -8,9 +8,11 @@ Project Benson consists of playing the part of a data science consultant to the 
 After receiving the proposal, my partner and I broke the project down into 3 parts:
 1. Defining of objectives and assumptions. 
 2. Data identification and sourcing.
-3. Data exploration and recommendations.
+3. Exploratory analysis and recommendations.
 
 #### Part 1:
+After reviewing the proposal, we determined the multifaceted problem of optimal street team placement was driven by two main objectives, increase attendance and attract monetary support.  From these objectives we derived a target demographic for the WTWY gala.  We made additional assumptions regarding the date of the event as well as the timeline for street team canvassing as well as defined our assumptions regarding the event date and canvassing timeframe.
+
 ##### Objectives
 Optimize Placement of WTWY street teams to:
 * Increase attendance at their annual summer gala.
@@ -20,7 +22,7 @@ Optimize Placement of WTWY street teams to:
 * WYWT annual gala will be held mid-June 2018.
 * Street team canvassing will target March through June 2018 timeframe.
 * Target demographic:
-    * Higher Education (bachelors degree or higher)
+    * Highly Educated (bachelors degree or higher)
     * Techology Workers (engineers, scientists, researchers, etc.)
     * Wealthy Donors (yearly income greater than $200K)
 
