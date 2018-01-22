@@ -2,6 +2,10 @@
 ## Exploring NYC MTA Turnsile Data
 
 ### Overview
+Project Benson consists of playing the part of a data science consultant to the WomenTechWomenYes (WTWY), whose charter is to increase support and awareness for women in technology.  After your initial contact at a recent event, you received a proposal to assist the organization with the placement of their street teams leading up to their annual summer gala.
+
+#### Approach
+We were paired into groups of two for the first project.  My partner and I broke the problem down into 
 
 ### Problem Summary
 #### Objective:
