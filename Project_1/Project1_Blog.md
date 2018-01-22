@@ -33,10 +33,15 @@ The WTWY client identified NYC MTA turnsile data as their primary data source of
 * NYC MTA Turnsile Data: Entry and exit counts for the years 2015 to 2017 during the months of March through June.
 * 5-Year ACS data: Age, sex, income, education level data for the years 2011 to 2016.
 * Current NYC startup locations as of January 2018.
-* Current technology meetup locations as of January 2018.   
+* Current NYC technology Meetup locations as of January 2018.   
     
 #### Part 3: 
-Finally, we got to the fun stuff, actually getting the data and performing exploratory analysis.  Acquiring the MTA turnstile data was fairly straightforward.  It entailed scraping the HTML anchor tags from the MTA website to compile a list of links to each data file, then looping through the list to download each file that fell within the time period of interest.  Obtaining the ACS data was somewhat more painful as this required a deeper understanding of the different aggregation levels of the data as well as a tradeoff in time to acquire the data at a particular resolution.   , following a similar methodology to identify the paths to the data files
+Finally, we got to the fun stuff, actually getting the data and performing exploratory analysis.  Acquiring the MTA turnstile data was fairly straightforward.  It entailed scraping the HTML anchor tags from the MTA website to compile a list of links to each data file, then looping through the list to download each file that fell within the time period of interest.  Obtaining the ACS data was somewhat more painful as this required a deeper understanding of the different aggregation levels of the data as well as a tradeoff in time to download the data at a particular resolution.  
+
+It was getting to be fairly late in the week at this point, given the truncated timeframe due to MLK Day.  Therefore, we decided to concentrate on cleaning and analyzing the data we had before attempting to obtain the other datasets.  This proved to be a fortuitous decision, given the many difficulties encountered when cleaning and linking the datasets that we had.  We also lost a lot time tracking configuration issues while debugging code that would run on my machine but would break on my partner's.  
+
+
+
 
 ### Challenges
  
