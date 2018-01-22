@@ -10,14 +10,13 @@ After receiving the proposal, my partner and I broke the project down into 3 par
 2. Data identification and sourcing.
 3. Data exploration and recommendations.
 
-### Part 1:
-Thor
-#### Objectives
+#### Part 1:
+##### Objectives
 Optimize Placement of WTWY street teams to:
 * Increase attendance at their annual summer gala.
 * Attract potential donors to the organization.
 
-#### Assumptions
+##### Assumptions
 * WYWT annual gala will be held mid-June 2018.
 * Street team canvassing will target March through June 2018 timeframe.
 * Target demographic:
@@ -25,18 +24,17 @@ Optimize Placement of WTWY street teams to:
     * Techology Workers (engineers, scientists, researchers, etc.)
     * Wealthy Donors (yearly income greater than $200K)
 
-### Part 2:
-The WTWY client identified NYC MTA turnsile data as their primary data source of interest.  Because the insights available within the MTA turnsile data are limited mainly to foot traffic counts, we spent some time brainstorming and searching the web for potential data sources that would we could link to the MTA data to identify those stations most closely associated with the target demographic.  Our search led to several additional data sets: American Community Survey data from the US Census Bureau, startup data from Digital NYC and Built in NYC, and technology Meetups in NYC.
+#### Part 2:
+The WTWY client identified NYC MTA turnsile data as their primary data source of interest.  Because the insights available within the MTA turnsile data are limited mainly to foot traffic counts, we spent some time brainstorming and searching the web for potential data sources that would we could link to the MTA data to identify those stations most closely associated with the target demographic.  Our search led to several additional data sets of interest: American Community Survey (ACS) data from the US Census Bureau, startup location data from Digital NYC and Built in NYC, and NYC technology Meetup locations.
 
-#### Data Description
+##### Data Description
 * NYC MTA Turnsile Data:
-    * Entry and exit counts for every turnstile in the NYC MTA system for roughly the last six years.
-    * Recorded approximately every four hours starting at 12AM (i.e., 12AM, 4AM, 8AM, 12PM, 4PM, 8PM)
-* NYC ACS Census Data:
-    * Demographic information for the last five years.
-* NYC Startup Locations
+    * Entry and exit counts for every turnstile in the NYC MTA system for the years 2015 to 2017 during the months of March through June.
+* NYC ACS data for : Age, sex, income, education level data for 2011 to 2016.
+* Current NYC startup locations as of January 2018.
+* Current technology meetup locations as of January 2018.   
     
-### Approach
+#### Part 3: 
 
 
 ### Challenges
