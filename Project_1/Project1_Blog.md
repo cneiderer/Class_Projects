@@ -42,12 +42,7 @@ It was getting to be fairly late in the week at this point, given the truncated 
 
 Exploring the turnstile data leads to many interesting insights from negative and/or unrealistically high counts.  These were determined to be the result of maintenance actions that lead to unexpected counter resets and modifications. Linking the ACS data to the stations also proved very challenging, requiring the querying of the Google Maps API to determine station addresses relative to our data areas.  
 
-After we linked the ACS data to the MTA turnstile data we could calculate metrics by each station, which was easier but still not exactly easy.  Aggregating the by station and day wasn't too bad, but trying to utilize a finer time resolution was difficult due to the inconsistencies in the time audits.  Theoretically the audits occur every four hours; however, there were a significant number that didn't follow this regular pattern. 
+After we linked the ACS data to the MTA turnstile data we could calculate metrics by each station, which was easier but still not exactly easy.  For instance, aggregating the data by station and day wasn't too bad, but trying to use a finer time resolution was difficult due to the inconsistencies in the time audits.  Theoretically the audits occur every four hours; however, there were a significant number that didn't follow this regular pattern.  As we were spinning our wheels on this problem, time was once again working againstst us; thus, we decided abandon this effort, especially given the difficulties my partner was having in getting the code to run.  
 
+The grandiose ambitions and ideas we had at the start of the project were ultimately checked due to configuration problems and lack of time.  However, we were still able to pull together a minimally viable product that provided some value to our client in the time allotted.  
 
-
-
-
-
-### Challenges
- 
