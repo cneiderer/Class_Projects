@@ -13,6 +13,6 @@ Optimize Placement of WTWY street teams to:
 * WYWT annual gala will be held mid-June 2018.
 * Street team canvassing will target the March through June 2018.
 * Target demographic for the event:
- * College Graduates (Bachelors or higher)
- * Technology Workers (engineers, scientists, researchers, etc.)
- * Wealthy Donors
+    * College Graduates (Bachelors or higher)
+    * Technology Workers (engineers, scientists, researchers, etc.)
+    * Wealthy Donors
