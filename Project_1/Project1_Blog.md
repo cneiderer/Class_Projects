@@ -46,8 +46,17 @@ Optimize Placement of WTWY street teams to:
 * NYC MTA Turnsile Data: Entry and exit counts for the years 2015 to 2017 during the months of March through June.
 * 5-Year ACS data: Age, sex, income, education level data for the years 2011 to 2016.
 
-#### Recommendations
- ![Most Valuable Stations Map](./most_valuable_stations_map.png)
+#### Metrics explored:
+* Foot Traffic (FT)
+* Median Household Income (MedHH)
+* Proximity to Wealthy Donors (WD)
+* Educational Attainment (EA)
+
+#### Station Scoring:
+Station Value = 0.5*FT + 0.1*MedHH + 0.1*WD + 0.3*EA
+
+#### Recommendations:
+![Most Valuable Stations Map](./most_valuable_stations_map.png)
  
- ![Most Valuable Stations Bar Chart](./most_valuable_stations_barh.png)
+![Most Valuable Stations Bar Chart](./most_valuable_stations_barh.png)
 
