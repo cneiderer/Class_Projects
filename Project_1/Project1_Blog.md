@@ -27,9 +27,8 @@ Optimize Placement of WTWY street teams to:
 #### Part 2:
 The WTWY client identified NYC MTA turnsile data as their primary data source of interest.  Because the insights available within the MTA turnsile data are limited mainly to foot traffic counts, we spent some time brainstorming and searching the web for potential data sources that would we could link to the MTA data to identify those stations most closely associated with the target demographic.  Our search led to several additional data sets of interest: American Community Survey (ACS) data from the US Census Bureau, startup location data from Digital NYC and Built in NYC, and NYC technology Meetup locations.
 
-##### Data Description
-* NYC MTA Turnsile Data:
-    * Entry and exit counts for every turnstile in the NYC MTA system for the years 2015 to 2017 during the months of March through June.
+##### Data
+* NYC MTA Turnsile Data: Entry and exit counts for the years 2015 to 2017 during the months of March through June.
 * NYC ACS data for : Age, sex, income, education level data for 2011 to 2016.
 * Current NYC startup locations as of January 2018.
 * Current technology meetup locations as of January 2018.   
