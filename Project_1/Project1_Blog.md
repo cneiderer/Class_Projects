@@ -18,6 +18,12 @@ Optimize Placement of WTWY street teams to:
     * Wealthy Donors (yearly income greater than $200K)
 
 #### Data Sources:
-* NYC MTA Turnsile Data
-    * Entry and exit counts for every turnstile in the MTA system recorded approximately every four hours starting at 12AM.
+* NYC MTA Turnsile Data:
+    * Entry and exit counts for every turnstile in the NYC MTA system.
+    * Recorded approximately every four hours starting at 12AM (i.e., 12AM, 4AM, 8AM, 12PM, 4PM, 8PM)
+    
+### Approach
+
+
+### Challenges
  
