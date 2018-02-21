@@ -32,7 +32,7 @@
      }
 
      .bar {
-       fill: #FF75A3;
+       fill: rgb(70, 12, 62);
      }
 
      span {
@@ -66,37 +66,37 @@
 
     <div id="sliders" class="wrapper">
 
-      <h2 class="feature">Fixed Acidity: <span id="fixed_acidity">4.6</span></h2>
+      <h2 class="feature">Fixed Acidity: <span id="fixed_acidity">9.6</span></h2>
       <div id="fixed_acidity_slider"></div>
 
-      <h2 class="feature">Volatile Acidity: <span id="volatile_acidity">0.120</span></h2>
+      <h2 class="feature">Volatile Acidity: <span id="volatile_acidity">0.51</span></h2>
       <div id="volatile_acidity_slider"></div>
 
-      <h2 class="feature">Citric Acid: <span id="citric_acid">0</span></h2>
+      <h2 class="feature">Citric Acid: <span id="citric_acid">0.61</span></h2>
       <div id="citric_acid_slider"></div>
 
-      <h2 class="feature">Residual Sugar: <span id="residual_sugar">0.900</span></h2>
+      <h2 class="feature">Residual Sugar: <span id="residual_sugar">7.4</span></h2>
       <div id="residual_sugar_slider"></div>
 
-      <h2 class="feature">Chlorides: <span id="chlorides">0.012</span></h2>
+      <h2 class="feature">Chlorides: <span id="chlorides">0.434</span></h2>
       <div id="chlorides_slider"></div>
 
-      <h2 class="feature">Free Sulphur Dioxide: <span id="free_so2">1</span></h2>
+      <h2 class="feature">Free Sulphur Dioxide: <span id="free_so2">32</span></h2>
       <div id="free_so2_slider"></div>
 
-      <h2 class="feature">Total Sulphur Dioxide: <span id="total_so2">0.900</span></h2>
+      <h2 class="feature">Total Sulphur Dioxide: <span id="total_so2">133</span></h2>
       <div id="total_so2_slider"></div>
 
-      <h2 class="feature">Density: <span id="density">0.012</span></h2>
+      <h2 class="feature">Density: <span id="density">0.998</span></h2>
       <div id="density_slider"></div>
 
-      <h2 class="feature">pH: <span id="ph">2.74</span></h2>
+      <h2 class="feature">pH: <span id="ph">3.25</span></h2>
       <div id="ph_slider"></div>
 
-      <h2 class="feature">Sulphates: <span id="sulphates">0.330</span></h2>
+      <h2 class="feature">Sulphates: <span id="sulphates">1.16</span></h2>
       <div id="sulphates_slider"></div>
 
-      <h2 class="feature">Alcohol: <span id="alcohol">8.4</span></h2>
+      <h2 class="feature">Alcohol: <span id="alcohol">13.6</span></h2>
       <div id="alcohol_slider"></div>
 
     </div>
@@ -110,54 +110,21 @@
 
       <!-- SINGLE BAR CHART -->
 
-      var current_age = 25;
-      var current_year = 2010;
-      var current_nodes = 1;
-      var current_risk = 97.0;
+      var current_fixed_acidity = 9.6;
+      var current_volatile_acidity = 0.51;
+      var current_citric_acid = 0.61;
+      var current_residual_sugar = 7.4;
+      var current_chlorides = 0.434;
+      var current_free_so2 = 32;
+      var current_total_so2 = 133;
+      var current_density = 0.998;
+      var current_ph = 3.25;
+      var current_sulphates = 1.16;
+      var current_alcohol = 13.6;
 
-      var current_fixed_acidity = 4.6;
-      var current_volatile_acidity = 0.120;
-      var current_citric_acid = 0;
-      var current_residual_sugar = 0.900;
-      var current_chlorides = 0.012;
-      var current_free_so2 = 1;
-      var current_total_so2 = 6;
-      var current_density = 0.990;
-      var current_ph = 2.74;
-      var current_sulphates = 0.330;
-      var current_alcohol = 8.4;
-
-      var current_bar1 = 50.0
-      var current_bar2 = 50.0
-      var current_bar3 = 50.0
-
-      /*var chart = d3.select("#bar_chart")
-        .append("svg:svg")
-        .attr("width", 800)
-        .attr("height", 50);
-
-      var chance_scale = d3.scale.linear()
-        .domain([0, 100])
-        .range([0, 800]);
-
-      var bar = chart.append("g")
-        .attr("class", "bar")
-
-      bar.append("svg:rect")
-        .attr("id", "chancebar")
-        .attr("class", "bar")
-        .attr("width", chance_scale(current_risk))
-        .attr("height", 50);
-
-      bar.append("text")
-        .attr("id", "percent_text")
-        .attr("dy", ".75em")
-        .attr("y", 15)
-        .attr("x", chance_scale(current_risk - 5))
-        .attr("text-anchor", "middle")
-        .attr("fill", "white")
-        .attr("font-size", 20)
-        .text(current_risk.toFixed(1) + "%");*/
+      var current_bar1 = 48.4
+      var current_bar2 = 21.9
+      var current_bar3 = 29.7
 
       <!-- BAR1 CHART -->
 
@@ -319,7 +286,7 @@
             .max(15.9)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#fixed_acidity').text(value);
+              d3.select('#fixed_acidity').text(value.toFixed(1));
               current_fixed_acidity = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -345,7 +312,7 @@
             .max(1.58)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#volatile_acidity').text(value);
+              d3.select('#volatile_acidity').text(value.toFixed(2));
               current_volatile_acidity = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -371,7 +338,7 @@
             .max(1.0)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#citric_acid').text(value);
+              d3.select('#citric_acid').text(value.toFixed(2));
               current_citric_acid = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -397,7 +364,7 @@
             .max(15.5)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#residual_sugar').text(value);
+              d3.select('#residual_sugar').text(value.toFixed(1));
               current_residual_sugar = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -423,7 +390,7 @@
             .max(0.611)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#chlorides').text(value);
+              d3.select('#chlorides').text(value.toFixed(3));
               current_chlorides = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -449,7 +416,7 @@
             .max(72)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#free_so2').text(value);
+              d3.select('#free_so2').text(value.toFixed(0));
               current_free_so2 = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -475,7 +442,7 @@
             .max(289)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#total_so2').text(value);
+              d3.select('#total_so2').text(value.toFixed(0));
               current_total_so2 = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -501,7 +468,7 @@
             .max(1.004)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#density').text(value);
+              d3.select('#density').text(value.toFixed(3));
               current_density = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -527,7 +494,7 @@
             .max(4.01)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#ph').text(value);
+              d3.select('#ph').text(value.toFixed(2));
               current_ph = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -553,7 +520,7 @@
             .max(2.00)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#sulphates').text(value);
+              d3.select('#sulphates').text(value.toFixed(2));
               current_sulphates = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
@@ -579,7 +546,7 @@
             .max(14.9)
             .axis(true)
             .on("slide", function(evt,value) {
-              d3.select('#alcohol').text(value);
+              d3.select('#alcohol').text(value.toFixed(1));
               current_alcohol = value;
               getAndDrawQualityPct(current_fixed_acidity, 
                                    current_volatile_acidity,
