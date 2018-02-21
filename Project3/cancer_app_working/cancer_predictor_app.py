@@ -2,7 +2,6 @@ import flask
 from sklearn.linear_model import LogisticRegression
 import numpy as np
 import pandas as pd
-import pickle
 
 #---------- MODEL IN MEMORY ----------------#
 
@@ -16,8 +15,6 @@ X = patients[['age','year','nodes']]
 Y = patients['survived']
 PREDICTOR = LogisticRegression().fit(X,Y)
 
-# # Load pickled model
-# PREDICTOR = pickle.load( open( "svm_model.pkl", "rb" ))
 
 #---------- URLS AND WEB PAGES -------------#
 
@@ -48,25 +45,6 @@ def score():
     # Put the result in a nice dict so we can send it as json
     results = {"score": score[0,1]}
     return flask.jsonify(results)
-
-'''@app.route("/score", methods=["POST"])
-def score():
-    """
-    When A POST request with json data is made to this uri,
-    Read the example from the json, predict probability and
-    send it with a response
-    """
-    # Get decision score for our example that came with the request
-    data = flask.request.json
-    x = np.matrix(data["example"])
-    score = PREDICTOR.predict_proba(x)
-    # Put the result in a nice dict so we can send it as json
-
-    results = {"score1": score[0, 0],
-               "score2": score[0, 1],
-               "score3": score[0, 2]}
-    print(results)
-    return flask.jsonify(results)'''
 
 #--------- RUN WEB APP SERVER ------------#
 

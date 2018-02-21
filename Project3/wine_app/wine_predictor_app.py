@@ -6,18 +6,9 @@ import pickle
 
 #---------- MODEL IN MEMORY ----------------#
 
-# Read the scientific data on breast cancer survival,
-# Build a LogisticRegression predictor on it
-patients = pd.read_csv("haberman.data", header=None)
-patients.columns=['age','year','nodes','survived']
-patients=patients.replace(2,0)  # The value 2 means death in 5 years, update to more common 0
-
-X = patients[['age','year','nodes']]
-Y = patients['survived']
-PREDICTOR = LogisticRegression().fit(X,Y)
-
-# # Load pickled model
-# PREDICTOR = pickle.load( open( "svm_model.pkl", "rb" ))
+# Load pickled model
+#PREDICTOR = pickle.load(open('svm_model.pkl', 'rb'))
+PREDICTOR = pickle.load(open('logistic_model.pkl', 'rb'))
 
 #---------- URLS AND WEB PAGES -------------#
 
@@ -46,27 +37,12 @@ def score():
     x = np.matrix(data["example"])
     score = PREDICTOR.predict_proba(x)
     # Put the result in a nice dict so we can send it as json
-    results = {"score": score[0,1]}
-    return flask.jsonify(results)
-
-'''@app.route("/score", methods=["POST"])
-def score():
-    """
-    When A POST request with json data is made to this uri,
-    Read the example from the json, predict probability and
-    send it with a response
-    """
-    # Get decision score for our example that came with the request
-    data = flask.request.json
-    x = np.matrix(data["example"])
-    score = PREDICTOR.predict_proba(x)
-    # Put the result in a nice dict so we can send it as json
 
     results = {"score1": score[0, 0],
                "score2": score[0, 1],
                "score3": score[0, 2]}
     print(results)
-    return flask.jsonify(results)'''
+    return flask.jsonify(results)
 
 #--------- RUN WEB APP SERVER ------------#
 

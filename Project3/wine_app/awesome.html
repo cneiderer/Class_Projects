@@ -47,11 +47,6 @@
 
     <div id="chart_area" class="wrapper">
 
-      <h2>5 Year Survival Chance After Breast Cancer Surgery</h2>
-      <p class="space"></p>
-      <div id="bar_chart">
-      </div>
-
       <h2>Low Quality</h2>
       <p class="space"></p>
       <div id="bar_chart1">
@@ -71,16 +66,6 @@
 
     <div id="sliders" class="wrapper">
 
-      <h2 class="feature">Age: <span id="age">25</span></h2>
-      <div id="age_slider"></div>
-
-      <h2 class="feature">Year: <span id="year">2010</span></h2>
-      <div id="year_slider"></div>
-
-      <h2 class="feature">Number of malignant lymph nodes: <span id="nodes">1</span></h2>
-      <div id="nodes_slider"></div>
-
-      <!-- NEW SLIDERS -->
       <h2 class="feature">Fixed Acidity: <span id="fixed_acidity">4.6</span></h2>
       <div id="fixed_acidity_slider"></div>
 
@@ -130,7 +115,23 @@
       var current_nodes = 1;
       var current_risk = 97.0;
 
-      var chart = d3.select("#bar_chart")
+      var current_fixed_acidity = 4.6;
+      var current_volatile_acidity = 0.120;
+      var current_citric_acid = 0;
+      var current_residual_sugar = 0.900;
+      var current_chlorides = 0.012;
+      var current_free_so2 = 1;
+      var current_total_so2 = 6;
+      var current_density = 0.990;
+      var current_ph = 2.74;
+      var current_sulphates = 0.330;
+      var current_alcohol = 8.4;
+
+      var current_bar1 = 50.0
+      var current_bar2 = 50.0
+      var current_bar3 = 50.0
+
+      /*var chart = d3.select("#bar_chart")
         .append("svg:svg")
         .attr("width", 800)
         .attr("height", 50);
@@ -156,21 +157,9 @@
         .attr("text-anchor", "middle")
         .attr("fill", "white")
         .attr("font-size", 20)
-        .text(current_risk.toFixed(1) + "%");
+        .text(current_risk.toFixed(1) + "%");*/
 
       <!-- BAR1 CHART -->
-
-      var fixed_acidity = 4.6;
-      var volatile_acidity = 0.120;
-      var citric_acid = 0;
-      var residual_sugar = 0.900;
-      var chlorides = 0.012;
-      var free_so2 = 1;
-      var total_so2 = 6;
-      var density = 0.990;
-      var ph = 2.74;
-      var sulphates = 0.330;
-      var alcohol = 8.4;
 
      var chart = d3.select("#bar_chart1")
                    .append("svg:svg")
@@ -187,18 +176,18 @@
        bar.append("svg:rect")
           .attr("id", "chancebar1")
           .attr("class", "bar")
-          .attr("width", chance_scale(current_risk))
+          .attr("width", chance_scale(current_bar1))
           .attr("height", 50);
 
      bar.append("text")
         .attr("id", "percent_text1")
         .attr("dy", ".75em")
         .attr("y", 15)
-        .attr("x", chance_scale(current_risk-5))
+        .attr("x", chance_scale(current_bar1-5))
         .attr("text-anchor", "middle")
         .attr("fill", "white")
         .attr("font-size", 20)
-        .text( current_risk.toFixed(1) + "%");      
+        .text( current_bar1.toFixed(1) + "%");      
 
      <!-- BAR2 CHART -->
 
@@ -217,18 +206,18 @@
       bar.append("svg:rect")
         .attr("id", "chancebar2")
         .attr("class", "bar")
-        .attr("width", chance_scale(current_risk))
+        .attr("width", chance_scale(current_bar2))
         .attr("height", 50);
 
     bar.append("text")
       .attr("id", "percent_text2")
       .attr("dy", ".75em")
       .attr("y", 15)
-      .attr("x", chance_scale(current_risk-5))
+      .attr("x", chance_scale(current_bar2-5))
       .attr("text-anchor", "middle")
       .attr("fill", "white")
       .attr("font-size", 20)
-      .text( current_risk.toFixed(1) + "%");           
+      .text( current_bar2.toFixed(1) + "%");           
 
      <!-- BAR3 CHART -->
 
@@ -247,45 +236,22 @@
       bar.append("svg:rect")
         .attr("id", "chancebar3")
         .attr("class", "bar")
-        .attr("width", chance_scale(current_risk))
+        .attr("width", chance_scale(current_bar3))
         .attr("height", 50);
 
     bar.append("text")
       .attr("id", "percent_text3")
       .attr("dy", ".75em")
       .attr("y", 10)
-      .attr("x", chance_scale(current_risk-5))
+      .attr("x", chance_scale(current_bar3-5))
       .attr("text-anchor", "middle")
       .attr("fill", "white")
       .attr("font-size", 20)
-      .text( current_risk.toFixed(1) + "%");     
+      .text( current_bar3.toFixed(1) + "%");     
 
      <!-- FUNCTION TO GET CHANCE FROM YOUR PREDICTOR WITH AJAX AND CHANGE BAR  HEIGHT -->
-     
-     function getAndDrawChance(age, year, nodes){
 
-        year = year - 1900;
-        $.ajax({
-          type: "POST",
-          contentType: "application/json; charset=utf-8",
-          url: "/score",
-          dataType: "json",
-          async: true,
-          data: "{\"example\": ["+age+","+year+","+nodes+"]}",
-          success: function (data) {
-            var chance = 100 * data["score"];
-            d3.select("#chancebar")
-              .attr("width", chance_scale(chance));
-            d3.select("#percent_text")
-              .attr("x", chance_scale(chance-5))
-              .text(chance.toFixed(1) + "%");
-          },
-          error: function (result) {
-          }
-        })
-        }
-
-     /*function getAndDrawQualityPct(fixed_acidity, 
+     function getAndDrawQualityPct(fixed_acidity, 
                                    volatile_acidity, 
                                    citric_acid, 
                                    residual_sugar, 
@@ -315,23 +281,22 @@
                                +sulphates+","
                                +alcohol+"]}",
         success: function (data) {
-          var chance = 100 * data["score"];
           
-          var chance1 = chance[0]
+          var chance1 = data["score1"] * 100
           d3.select("#chancebar1")
             .attr("width", chance_scale(chance1));
           d3.select("#percent_text1")
             .attr("x", chance_scale(chance1-5))
             .text(chance1.toFixed(1) + "%");
           
-          var chance2 = chance[1]
+          var chance2 = data["score2"] * 100
           d3.select("#chancebar2")
             .attr("width", chance_scale(chance2));
           d3.select("#percent_text2")
             .attr("x", chance_scale(chance2-5))
             .text(chance2.toFixed(1) + "%");
           
-          var chance3 = chance[2]
+          var chance3 = data["score3"] * 100
           d3.select("#chancebar3")
             .attr("width", chance_scale(chance3));
           d3.select("#percent_text3")
@@ -341,56 +306,9 @@
         error: function (result) {
         }
       })
-      }*/
+      }
 
      <!-- SLIDERS -->
-
-     d3.select('#age_slider')
-       .call(
-         d3.slider()
-           .value(current_age)
-           .step(1)
-           .axis(true)
-           .on("slide", function(evt,value) {
-             d3.select('#age').text(value);
-             current_age = value;
-             getAndDrawChance(current_age, current_year, current_nodes)
-           }
-           )
-       );
-
-     d3.select('#year_slider')
-       .call(
-         d3.slider()
-           .value(current_year)
-           .min(1950)
-           .max(2010)
-           .step(1)
-           .axis(true)
-           .on("slide", function(evt,value) {
-             d3.select('#year').text(value);
-             current_year = value;
-             getAndDrawChance(current_age, current_year, current_nodes)
-           }
-           )
-       );
-
-     d3.select('#nodes_slider')
-       .call(
-         d3.slider()
-           .value(current_nodes)
-           .max(40)
-           .step(1)
-           .axis(true)
-           .on("slide", function(evt,value) {
-             d3.select('#nodes').text(value);
-             current_nodes = value;
-             getAndDrawChance(current_age, current_year, current_nodes)
-           }
-           )
-       );
-
-     <!-- NEW SLIDERS -->
 
       d3.select('#fixed_acidity_slider')
         .call(
