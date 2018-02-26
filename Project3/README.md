@@ -98,9 +98,7 @@ What about feature correlations? It appears that several features have high corr
 What about higher-dimensional relationships? We can use an interactive parallel coordinates plot to explore the n-dimensional feature relationships for each record in the dataset.
 No additional insights are readily apparent; rather it basically confirms what were already know about the dense overlap of the target classes.
 
-![Parallel Coordinates](./images/Parallel_Coordiantes.png)
-
-![Link to interactive Plotly visualization](https://plot.ly/~cneiderer/65)
+[![Interactive Parallel Coordinates](./images/Parallel_Coordiantes.png)](https://plot.ly/~cneiderer/65)
 
 ## 2. Data Preprocessing
 
