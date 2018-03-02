@@ -59,7 +59,6 @@ The output target is an ordinal score based on sensory data.
 1. Exploratory Analysis
 1. Data Preprocessing
 1. Modeling & Evaluation
-1. Conclusions
 
 ## 1. Exploratory Analysis
 
@@ -124,7 +123,7 @@ Wine tasting is a very subjective endeavor in which different sommeliers rate th
 
 ![GaussianNB Performance Evaluation](./images/GaussianNB.svg)
 
-## 4. Conclusion
+## Conclusion
 
 **Wine Tasting is at best pseudo-science**, as it is almost entirely subjective, and it can be influenced by so many other factors. We taste with our eyes, ears, noses, and even our sense of touch. We taste with our emotions, and our state of mind. This has been demonstrated time after time after time.
 
