@@ -98,6 +98,10 @@ What about higher-dimensional relationships? We can use an interactive parallel 
 No additional insights are readily apparent; rather it basically confirms what were already know about the dense overlap of the target classes.
 
 [![Interactive Parallel Coordinates](./images/Parallel_Coordiantes.png)](https://plot.ly/~cneiderer/65)
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~cneiderer/65.embed"></iframe>
+{% endraw %}
+A map of the restaurants included in this project.
 
 ## 2. Data Preprocessing
 
